@@ -4,6 +4,8 @@
 
 This project dives deep into customer feedback for the Apple iPhone 11, going beyond simple star ratings! We're using **Aspect-Based Sentiment Analysis (ABSA)** to pinpoint specific features people talk about (like the 📸 camera, 🔋 battery, or 🖥️ screen) and understand whether they're happy, sad, or neutral about each one. This gives us a much richer understanding of what users really think!
 
+**Author: Robert Mezian**
+
 ### **Dataset 📦**
 We're working with the "iPhone Reviews from Amazon.com" dataset, packed with over 30,000 reviews scraped from Amazon.com. It includes review text and star ratings.
 
@@ -13,7 +15,7 @@ We're working with the "iPhone Reviews from Amazon.com" dataset, packed with ove
 
 Here's how I'll be breaking it down:
 
-1.  **Data Loading & Exploration 🔍:** We're starting by loading the data and getting to know it, looking for patterns and insights.
+1.  **Data Loading & Exploration 🔍** We're starting by loading the data and getting to know it, looking for patterns and insights.
 2.  **Text Preprocessing 🧹** We're cleaning up the review text by making everything lowercase, removing punctuation and numbers, and using spaCy to lemmatize words and remove stop words.
 3.  **Aspect Extraction 🎯** We're finding the key features people talk about using frequency analysis (CountVectorizer) and matching them against a list of relevant iPhone features.
 4.  **Sentiment Assignment 😃😐😞** We're using NLTK's VADER sentiment analyzer to figure out the sentiment (positive, negative, or neutral) for each aspect in the sentences where they appear.
@@ -28,6 +30,27 @@ Here's how I'll be breaking it down:
 * **Matplotlib & Seaborn 📊** For creating insightful data visualizations.
 * **re 🔍** For regular expressions, helping us clean the text.
 
+### **Code and Implementation 💻:**
+**The complete code for this analysis is available in the `Aspect_Analysis.ipynb` Jupyter Notebook file within this repository.**
+1.  **Run the Cells Sequentially:** Once you have pasted all the content into the corresponding cells in your notebook:
+2.  Go back to the first cell (Cell 1). You can view Markdown notes to get a summary of each cell thats being outputted.
+3.  Run the cells one by one by pressing `Shift + Enter` in each cell, starting from the top.
+4.  Watch the output of each code cell to make sure it runs correctly without errors and produces the expected output (tables, plots, verification messages).
+
+---
+
+#### **Limitations 🚧**
+* The aspect extraction method relied on a predefined keyword list and simple string matching, which might miss some aspects or misclassify mentions.
+* Sentiment analysis used VADER, which is lexicon-based and may not capture complex nuances like sarcasm or context-dependent sentiment as accurately as transformer models.
+* The analysis was based on a single dataset for one product model (iPhone 11) from one source (Amazon). Results might differ for other models, time periods, or platforms.
+* Sentiment was assigned based on the average score of sentences containing the aspect; more sophisticated methods could link sentiment more directly to the aspect phrase.
+
+#### **Future Work 🚀**
+* Implement more advanced aspect extraction techniques (e.g., using dependency parsing or named entity recognition).
+* Utilize more sophisticated sentiment analysis models (e.g., fine-tuning BERT or using other transformer-based models).
+* Expand the analysis to compare different iPhone models or competitors.
+* Analyze the evolution of aspect sentiment over time if timestamps allow.
+* Develop an interactive dashboard or tool to explore the results.
 ---
 
 **© Copyright 2025: Robert Mezian. All Rights Reserved.**
