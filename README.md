@@ -30,6 +30,24 @@ Here's how I'll be breaking it down:
 * **Matplotlib & Seaborn 📊** For creating insightful data visualizations.
 * **re 🔍** For regular expressions, helping us clean the text.
 
+### **Setup & Use:**
+Download or clone this repo as a zip file. Extract zip file then use Terminal or Command Prompt for the following:
+1. **Make sure you have Python 3.11x installed with pip.**
+* Activate/Create virtual environment:  
+  ``python -m venv myenv``
+* Then run a cmd/terminal to the path of the environment: 
+  ``cd c://Users//YOURUSERNAME/PATH-TO-GIT-FILE-DOWNLOADED``
+* Download all necessary pip files with my 'requirements.txt':
+
+  `pip install -r requirements.txt`
+
+2. **Use your preferred IDE or Jupyter notebook (preferred):**
+* Run ``jupyter notebook`` in cmd or terminal (With the path being where the files have been downloaded.)
+
+3. **The notebook will open and you can run code cell by cell, or Run All cells at once and view output.**
+*   **NOTE:** Make sure .csv file is in same path as the jupyter notebook source file!
+
+
 ### **Code and Implementation 💻:**
 **The complete code for this analysis is available in the `Aspect_Analysis.ipynb` Jupyter Notebook file within this repository.**
 1.  **Run the Cells Sequentially:** Once you have pasted all the content into the corresponding cells in your notebook:
